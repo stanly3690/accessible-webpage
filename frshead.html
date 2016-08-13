@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> FRS Pointer </title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script language = "javascript">
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new
+ActiveXObject("Microsoft.XMLHTTP");
+}
+function getData(dataSource,divID, d, s, a, b)
+{
+	photo = ["acu-point.jpg","adjustable.jpg","clearview.jpg","frs.jpg"];
+	price = ["136","139","150","280"];
+	titl = ["Acupoint Head-Pointer","Adjustable Head-Pointer","clear view Head-Pointer","FRS Head-Pointer"];
+	
+			var obj1 = document.getElementById(d);
+			var obj2 = document.getElementById(s);
+			var obj3 = document.getElementById(a);
+			
+	
+	if(XMLHttpRequestObject) 
+		{
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObject.open("GET", dataSource);
+			XMLHttpRequestObject.onreadystatechange = function()
+				{
+					if (XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200) 
+						{
+							obj.innerHTML = XMLHttpRequestObject.responseText;
+							
+						
+						}
+				}
+					
+XMLHttpRequestObject.send(null);
+		}
+		
+		if(b == "ac" )
+		{
+				obj1.src = photo[0];	
+				obj2.innerHTML = price[0];
+				obj3.innerHTML = titl[0];
+		}
+		
+		if(b == "ad" )
+		{
+				obj1.src = photo[1];	
+				obj2.innerHTML = price[1];
+				obj3.innerHTML = titl[1];
+		}
+		
+		if(b == "cv" )
+		{
+				obj1.src = photo[2];	
+				obj2.innerHTML = price[2];
+				obj3.innerHTML = titl[2];
+		}
+		
+		if(b == "frs" )
+		{
+				obj1.src = photo[3];	
+				obj2.innerHTML = price[3];
+				obj3.innerHTML = titl[3];
+		}
+}
+</script>
+
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#"> ASSIST-SHOP </a></h1>
+				<p>We make you able</p>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Homepage</a></li>
+					<li><a href="aboutus.html">ABOUT US</a></li>
+					<li class="current_page_item"><a href="product.html">PRODUCTS</a></li>
+					<li><a href="sign-up.html">SIGN UP</a></li>
+					<li><a href="contactus.html">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						
+						
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+                        
+							<p>
+                            <div id="image">
+                            <h3 class="title" id="titl"><a href="#">FRS Head Pointer</a></h3>
+							<img src="frs.jpg" alt="FRS Head pointer" width="400" height="370" id="imag">
+							 <p id="ajax"> The FRS Custom Solutions Headpointer is a headwand designed for use by individuals with spinal cord injury or upper extremity disabilities or severe physical disabilities. The Headpointer can assist users with a wide range of daily tasks including communication device access, computer access, elevator operation, and light and appliance control. The lightweight head pointer features a durable one-piece plastic frame lined with high-density padding. An adjustable elastic back and chin strap keeps the head wand securely in position, while providing a comfortable customized fit. The standard aluminum pointer is adjustable and locks securely in place. OPTIONS: Custom formed and alternate rod lengths are available. SIZES: Available in adult and child/small size. DIMENSIONS: The standard pointer is 18 inches long. WEIGHT: 7.5 ounces.The FRS Custom Solutions head pointer is designed to assist physically challenged individuals with a wide range of daily tasks including communication device access, computer access, elevator operation, light and appliance control. . Our lightweight (7.5 ounces) head pointer features a durable one piece plastic frame lined with comfortable high density padding. An adjustable elastic back and chinstrap keeps the head wand securely in position, while providing a comfortable, customized fit. The standard 18” aluminum pointer rod is easily adjustable and locks securely in place. Custom formed and alternate rod lengths are available to meet specific needs.</p>
+                             						<p> Price is : <label id="price">280</label> $ </p>
+                                                    <p id="par"><a href="log-in.html"> Buy this device </a></p> 
+                                                    <p><iframe width="560" height="315" src="//www.youtube.com/embed/q070e0qxLEg" frameborder="0" allowfullscreen></iframe></p>
+                                                    
+                                                    
+					</div>
+                    
+                           </p> 
+                            
+
+						</div>
+					</div>
+												
+					</div>
+					
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Latest News</h2>
+							<p>
+                            	Todays we can inform you that the newest products are released and now you are able to buy them through our website.
+                            </p>
+						</li>
+						<li>
+							<h2>Product Categories</h2>
+							<ul>
+								<li><a href="#" onClick="getData('data.txt', 'ajax', 'imag', 'price', 'titl', 'ac'); return false">Acupoint Head-pointer</a></li>
+								<li><a href="#" onClick="getData('data1.txt', 'ajax', 'imag', 'price', 'titl', 'ad'); return false">Adjustable</a></li>
+								<li><a href="#" onClick="getData('data2.txt', 'ajax', 'imag', 'price', 'titl', 'cv'); return false">Clear View</a></li>
+								<li><a href="#" onClick="getData('data3.txt', 'ajax', 'imag', 'price', 'titl', 'frs'); return false">FRS Head-pointer</a></li>
+							</ul>
+						</li>
+						<li>
+							<h2>Useful Links</h2>
+							<ul>
+								<li><a href="http://www.lgassistivetechnologies.com/" target="new">LG Assistive Tech</a></li>
+								<li><a href="http://assistivetech.net/" target="new">AssistiveTech.net</a></li>
+								<li><a href="http://www.eastin.eu" target="new">European Assistive </a></li>
+								<li><a href="http://www.fctd.info/" target="new">Family Center Disability</a></li>
+								<li><a href="http://www.disabled-world.com/" target="new">Disabled World</a></li>
+								<li><a href="http://www.connectwc.org/" target="new">Disabled Community</a></li>
+							</ul>
+						</li>
+					</ul>
+</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2014 Assistshop.com All rights reserved.
+</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
